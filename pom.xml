@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>manage-control</artifactId>
+    <version>1.0-RELEASE</version>
+
+    <parent>
+        <artifactId>base</artifactId>
+        <groupId>com.biqasoft</groupId>
+        <version>2016.8.4</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>microservice</artifactId>
+            <version>${biqa.infrastructure-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>common</artifactId>
+            <version>${biqa.infrastructure-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>entity-core</artifactId>
+            <version>${biqa.binding-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>auth</artifactId>
+            <version>${biqa.infrastructure-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>customer</artifactId>
+            <version>${biqa.infrastructure-version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.biqasoft</groupId>-->
+            <!--<artifactId>bpmn</artifactId>-->
+            <!--<version>${biqa.infrastructure-version}</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>mongodb</artifactId>
+            <version>${biqa.infrastructure-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.biqasoft</groupId>
+            <artifactId>microservice-i18n</artifactId>
+            <version>${biqa.infrastructure-version}</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
