@@ -1,0 +1,28 @@
+<md-dialog aria-label=" Создание нового Data Source" style="width: 40%;">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2> Удалить Пользователя {{ currentDomainEditableModal.username }} </h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+        <md-dialog-content style="  ">
+            <div class="panel-body text-center">
+
+                <!--<br> <br>-->
+                {{currentDomainEditableModal | json}}
+                <br><br>
+                <br>
+
+                Будет удалён пользователь
+
+            </div>
+
+            <md-dialog-actions layout="row">
+                <md-button class="md-raised md-danger"
+                           ng-click="deleteDomainById(currentDomainEditableModal)" style="margin-right:20px;"
+                >Удалить</md-button>
+            </md-dialog-actions>
+        </md-dialog-content>
+    </form>
+</md-dialog>

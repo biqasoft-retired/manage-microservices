@@ -1,0 +1,70 @@
+<md-dialog aria-label=" Создание нового Data Source" style="width: 40%;">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2> {{ currentDomainEditableModal.domain }} </h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+        <md-dialog-content style="  ">
+            <div class="panel-body text-center">
+
+                <!--{ "domain": "9fl4pv", "balance": 0, "bonusBalance": 0, "balanceCurrency": "RUB", "partnerID": null, "tariff": null, "tariffUntil": null, "active": true, "createdInfo": null }-->
+
+                {{currentDomainEditableModal | json}}
+
+                <table class="table">
+                    <tr>
+                        <td>Баланс</td>
+                        <td>
+                            <input type="number" ng-model="currentDomainEditableModal.balance" class="form-control">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Бонусный баланс</td>
+                        <td>
+                            <input type="number" ng-model="currentDomainEditableModal.bonusBalance" class="form-control">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Активен
+                        </td>
+                        <td>
+                            <md-checkbox class="nopadding"
+                                         type="checkbox"
+                                         ng-model="currentDomainEditableModal.active"
+                            >
+                            </md-checkbox>
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                        <!--<td>Описание</td>-->
+                        <!--<td>-->
+                            <!--<input type="text" ng-model="currentEditableSalesFunnelStatus.description" class="form-control">-->
+                        <!--</td>-->
+                    <!--</tr>-->
+
+
+                </table>
+
+                <!--<md-dialog-actions layout="row">-->
+                    <!--<md-button class="md-raised md-primary"-->
+                               <!--ng-click="saveChangesOnCurrentObject()" style="margin-right:20px;"-->
+                    <!--&gt;Сохранить-->
+                    <!--</md-button>-->
+                <!--</md-dialog-actions>-->
+
+            </div>
+
+            <md-dialog-actions layout="row">
+                <md-button class="md-raised md-primary"
+                           ng-click="saveCurrentEditableDomain()" style="margin-right:20px;"
+                >Сохранить</md-button>
+            </md-dialog-actions>
+        </md-dialog-content>
+    </form>
+</md-dialog>

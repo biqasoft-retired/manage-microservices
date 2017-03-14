@@ -1,0 +1,106 @@
+<h1>Domains</h1>
+<table class="table table-bordered table-hover ">
+
+    <thead>
+    <tr>
+        <td>№</td>
+        <td>
+            Domains
+        </td>
+        <td>
+            Balance
+        </td>
+        <td>
+            Bonus balance
+        </td>
+        <td>
+            Currency
+        </td>
+        <td>
+            partner id
+        </td>
+        <td>
+            tariff
+        </td>
+        <td>
+            tariff ends
+        </td>
+        <td>
+            active
+        </td>
+        <td>
+            created
+        </td>
+
+        <td>
+        </td>
+
+        <td>
+        </td>
+
+    </tr>
+    </thead>
+
+    <tbody>
+
+
+    <tr ng-repeat="domain in allGoods">
+        <td>
+            {{$index + 1}}
+        </td>
+        <td>
+            {{domain.domain}}
+        </td>
+        <td>
+            {{domain.balance}}
+        </td>
+        <td>
+            {{domain.bonusBalance}}
+        </td>
+        <td>
+            {{domain.balanceCurrency}}
+        </td>
+        <td>
+            {{domain.partnerID}}
+        </td>
+        <td>
+            {{domain.tariff}}
+        </td>
+        <td>
+            {{domain.tariffUntil}}
+        </td>
+        <td>
+            {{domain.active}}
+        </td>
+        <td>
+            {{domain.createdInfo}}
+        </td>
+
+        <td>
+
+            <md-menu>
+                <md-button class="btn-sm"
+                           ng-click="openMenu($mdOpenMenu, $event)">
+                    more
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="deleteDomainConfirmation(domain)">
+                            delete
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="editDomain(domain, $event)">
+                            edit
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </td>
+
+    </tr>
+
+    </tbody>
+</table>
+
+

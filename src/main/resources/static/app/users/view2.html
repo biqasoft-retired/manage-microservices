@@ -1,0 +1,115 @@
+<h1>Users</h1>
+<table class="table table-bordered table-hover ">
+
+    <thead>
+    <tr>
+        <td>
+            №
+        </td>
+        <td>
+            Domains
+        </td>
+
+        <td>
+            ID
+        </td>
+
+        <td>
+            login
+        </td>
+
+        <td>
+            Email
+        </td>
+
+        <td></td>
+
+        <td>
+            Roles
+        </td>
+
+        <td>
+            last online
+        </td>
+
+        <td>
+            created
+        </td>
+
+        <td>
+        </td>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr ng-repeat="domain in allGoods">
+        <td>
+            {{$index + 1}}
+        </td>
+
+        <td>
+            {{domain.domains}}
+        </td>
+
+        <td>
+            {{domain.id}}
+        </td>
+
+        <td>
+            {{domain.username}}
+        </td>
+
+        <td>
+            {{domain.email}}
+        </td>
+
+        <td>
+            <div ng-if="domain.status == 'STATUS_APPROVED' && domain.enabled">
+                active
+            </div>
+
+            <div ng-if="domain.status != 'STATUS_APPROVED' || !domain.enabled">
+                status: {{domain.status}}, enabled: {{domain.enabled}}
+            </div>
+
+        </td>
+
+        <td>
+            {{domain.roles}}
+        </td>
+
+        <td>
+            {{domain.lastOnline | date:'medium'}}
+        </td>
+        <td>
+            {{domain.createdInfo.createdDate | date:'medium'}}
+        </td>
+        <td>
+
+            <md-menu>
+                <md-button class="btn-sm"
+                           ng-click="openMenu($mdOpenMenu, $event)">
+                    more
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="deleteDomainConfirmation(domain)">
+                            delete
+                        </md-button>
+                    </md-menu-item>
+                    <md-menu-item>
+                        <md-button ng-click="editDomain(domain, $event)">
+                            edit
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+
+
