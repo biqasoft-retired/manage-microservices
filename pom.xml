@@ -38,11 +38,11 @@
             <version>${biqa.infrastructure-version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.biqasoft</groupId>
-            <artifactId>customer</artifactId>
-            <version>${biqa.infrastructure-version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.biqasoft</groupId>-->
+            <!--<artifactId>customer</artifactId>-->
+            <!--<version>${biqa.infrastructure-version}</version>-->
+        <!--</dependency>-->
 
         <!--<dependency>-->
             <!--<groupId>com.biqasoft</groupId>-->
