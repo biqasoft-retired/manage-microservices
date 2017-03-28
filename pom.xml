@@ -38,18 +38,6 @@
             <version>${biqa.infrastructure-version}</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.biqasoft</groupId>-->
-            <!--<artifactId>customer</artifactId>-->
-            <!--<version>${biqa.infrastructure-version}</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>com.biqasoft</groupId>-->
-            <!--<artifactId>bpmn</artifactId>-->
-            <!--<version>${biqa.infrastructure-version}</version>-->
-        <!--</dependency>-->
-
         <dependency>
             <groupId>com.biqasoft</groupId>
             <artifactId>mongodb</artifactId>
@@ -61,7 +49,29 @@
             <artifactId>microservice-i18n</artifactId>
             <version>${biqa.infrastructure-version}</version>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.4.1.Final</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
