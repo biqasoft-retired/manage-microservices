@@ -16,7 +16,7 @@ angular.module('myApp.services', ['ngRoute'])
             $http.defaults.headers.common["Accept"] = "application/json";
             $http.defaults.headers.common["Content-Type"] = "application/json";
 
-            var baseUrl = 'http://localhost:9091';
+            var baseUrl = '/';
             $rootScope.baseUrl = baseUrl;
             $rootScope.showSidebar = false;
 
