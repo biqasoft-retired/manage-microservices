@@ -34,7 +34,7 @@
 
         <dependency>
             <groupId>com.biqasoft</groupId>
-            <artifactId>auth</artifactId>
+            <artifactId>auth-context</artifactId>
             <version>${biqa.infrastructure-version}</version>
         </dependency>
 

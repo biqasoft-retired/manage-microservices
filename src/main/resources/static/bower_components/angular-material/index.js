@@ -1,9 +1,9 @@
 // Should already be required, here for clarity
-require('angular');
+require('static/bower_components/angular/angular');
 
 // Load Angular and dependent libs
-require('angular-animate');
-require('angular-aria');
+require('static/bower_components/angular-animate/angular-animate');
+require('static/bower_components/angular-aria/angular-aria');
 
 // Now load Angular Material
 require('./angular-material');
