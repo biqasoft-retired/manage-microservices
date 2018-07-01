@@ -2,14 +2,14 @@
     <form>
         <md-toolbar>
             <div class="md-toolbar-tools">
-                <h2> {{ currentDomainEditableModal.domain }} </h2>
+                <h2> {{ currentDomainEditableModal.domainDto }} </h2>
                 <span flex></span>
             </div>
         </md-toolbar>
         <md-dialog-content style="  ">
             <div class="panel-body text-center">
 
-                <!--{ "domain": "9fl4pv", "balance": 0, "bonusBalance": 0, "balanceCurrency": "RUB", "partnerID": null, "tariff": null, "tariffUntil": null, "active": true, "createdInfo": null }-->
+                <!--{ "domainDto": "9fl4pv", "balance": 0, "bonusBalance": 0, "balanceCurrency": "RUB", "partnerID": null, "tariff": null, "tariffUntil": null, "active": true, "createdInfo": null }-->
 
                 {{currentDomainEditableModal | json}}
 

@@ -44,36 +44,36 @@
     <tbody>
 
 
-    <tr ng-repeat="domain in allGoods">
+    <tr ng-repeat="domainDto in allGoods">
         <td>
             {{$index + 1}}
         </td>
         <td>
-            {{domain.domain}}
+            {{domainDto.domainDto}}
         </td>
         <td>
-            {{domain.balance}}
+            {{domainDto.balance}}
         </td>
         <td>
-            {{domain.bonusBalance}}
+            {{domainDto.bonusBalance}}
         </td>
         <td>
-            {{domain.balanceCurrency}}
+            {{domainDto.balanceCurrency}}
         </td>
         <td>
-            {{domain.partnerID}}
+            {{domainDto.partnerID}}
         </td>
         <td>
-            {{domain.tariff}}
+            {{domainDto.tariff}}
         </td>
         <td>
-            {{domain.tariffUntil}}
+            {{domainDto.tariffUntil}}
         </td>
         <td>
-            {{domain.active}}
+            {{domainDto.active}}
         </td>
         <td>
-            {{domain.createdInfo}}
+            {{domainDto.createdInfo}}
         </td>
 
         <td>
@@ -85,12 +85,12 @@
                 </md-button>
                 <md-menu-content width="4">
                     <md-menu-item>
-                        <md-button ng-click="deleteDomainConfirmation(domain)">
+                        <md-button ng-click="deleteDomainConfirmation(domainDto)">
                             delete
                         </md-button>
                     </md-menu-item>
                     <md-menu-item>
-                        <md-button ng-click="editDomain(domain, $event)">
+                        <md-button ng-click="editDomain(domainDto, $event)">
                             edit
                         </md-button>
                     </md-menu-item>
